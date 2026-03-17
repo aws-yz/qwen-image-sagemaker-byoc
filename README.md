@@ -4,6 +4,16 @@
 
 采用 BYOC（Bring Your Own Container）方案：自建 Docker 镜像 + Flask/Gunicorn 推理服务。
 
+### 为什么用 BYOC
+
+截至 2026-03-17，没有现成的 AWS DLC 同时支持 CUDA 12.8 + diffusers 文生图推理：
+
+- HF PyTorch Inference DLC：最高 CUDA 12.4，不支持 g7e（需要 CUDA 12.8+）
+- HF vLLM / SGLang DLC：CUDA 12.9，但只支持 LLM 推理，不支持 diffusers pipeline
+- Base DLC：有 CUDA 12.8，但没有推理框架
+
+BYOC 基于 Base DLC（CUDA 12.8）自行安装 diffusers + Flask/Gunicorn，解决了这个问题。
+
 ## 性能参考
 
 | 分辨率 | 步数 | 耗时 | 每步 |

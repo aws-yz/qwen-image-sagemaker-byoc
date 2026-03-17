@@ -1,0 +1,8 @@
+{
+  "model_id": "Qwen/Qwen-Image-2512",
+  "model_dir": "../model-2512",
+  "region": "us-east-1",
+  "s3_prefix": "models/qwen-image-2512",
+  "ecr_repo": "qwen-image-g7e",
+  "instance_type": "ml.g7e.4xlarge"
+}

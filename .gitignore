@@ -1,0 +1,6 @@
+config_2512.json
+deploy_info.json
+model_download_info_2512.json
+*.png
+*.tar.gz
+__pycache__/

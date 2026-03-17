@@ -211,8 +211,6 @@ python 4_cleanup.py
 | `true_cfg_scale` | 4.0 | CFG 引导强度 |
 | `seed` | None | 随机种子，固定可复现 |
 
-> 分辨率上限：`width × height ≤ 2048 × 2048`
-
 ## 响应格式
 
 ```json
